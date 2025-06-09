@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scorekeeper App</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      <!-- Header -->
+      <header class="text-center mb-8">
+        <h1 id="main-title" class="text-4xl font-bold text-indigo-800 mb-2">
+          Scorekeeper App
+        </h1>
+        <p class="text-gray-600">
+          A simple app to keep track of scores for your favorite games.
+        </p>
+      </header>
+
+      <!-- Controls -->
+      <div class="max-w-md mx-auto mb-6">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-xl font-semibold mb-4 text-gray-800">
+            Tambah Pemain
+          </h2>
+          <div class="flex gap-2">
+            <input
+              type="text"
+              id="player-name-input"
+              placeholder="Masukkan nama pemain"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+            <button
+              id="add-player-btn"
+              class="cursor-pointer px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
+            >
+              Tambah
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Player List -->
+      <div
+        id="players-container"
+        class="max-w-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
+      >
+        <!-- Player cards will be dynamically added here -->
+      </div>
+      <!-- Game Controls -->
+      <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <h2 class="text-xl font-semibold mb-4 text-gray-800">Kontrol Game</h2>
+          <div class="flex gap-2 mb-4">
+            <button
+              id="reset-score-btn"
+              class="cursor-pointer w-full px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition-colors"
+            >
+              Reset Score
+            </button>
+            <button
+              id="remove-all-btn"
+              class="cursor-pointer w-full px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+            >
+              Hapus Semua
+            </button>
+          </div>
+          <button
+            id="toggle-theme-btn"
+            class="cursor-pointer w-full px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+          >
+            Toggle Dark Mode
+          </button>
+        </div>
+      </div>
+      <!-- Statistics -->
+       <div id="stats-container" class="max-w-md mx-auto mt-8">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">Statistik</h2>
+            <div id="stats-content" class="space-y-2">
+                <p>Total Pemain : <span id="total-players">0</span></p>
+                <p>Pemain dengan Skor Tertinggi : <span id="highest-scorer">-</span></p>
+                <p>Total Skor : <span id="total-score">0</span></p>
+            </div>
+        </div>
+       </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
